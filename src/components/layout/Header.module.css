@@ -1,0 +1,161 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 20px 0;
+    transition: all 0.3s ease;
+}
+
+.header.scrolled {
+    background: rgba(10, 10, 11, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logoText {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+
+.navLink {
+    position: relative;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-decoration: none;
+    padding: 8px 0;
+    transition: color 0.2s ease;
+}
+
+.navLink::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #910a08;
+    transition: width 0.3s ease;
+}
+
+.navLink:hover {
+    color: var(--text);
+}
+
+.navLink:hover::after {
+    width: 100%;
+}
+
+.navLink.active {
+    color: var(--text);
+}
+
+.navLink.active::after {
+    width: 100%;
+}
+
+.menuToggle {
+    display: none;
+    width: 28px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.menuBar {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--text);
+    transition: all 0.3s ease;
+    transform: translateY(-50%);
+}
+
+.menuBar::before,
+.menuBar::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--text);
+    transition: all 0.3s ease;
+}
+
+.menuBar::before {
+    top: -8px;
+}
+
+.menuBar::after {
+    top: 8px;
+}
+
+.menuBar.open {
+    background: transparent;
+}
+
+.menuBar.open::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.menuBar.open::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+    .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--background);
+        flex-direction: column;
+        justify-content: center;
+        gap: 32px;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+    }
+
+    .nav.open {
+        transform: translateX(0);
+    }
+
+    .navLink {
+        font-size: 1.5rem;
+    }
+
+    .menuToggle {
+        display: block;
+        z-index: 101;
+    }
+}

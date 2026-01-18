@@ -1,36 +1,185 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<p align="center">
+  <img src="https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js" alt="Next.js">
+  <img src="https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
+  <img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React">
+  <img src="https://img.shields.io/badge/Docker-Ready-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker">
+</p>
 
-## Getting Started
+<h1 align="center">
+  <img src="public/logo.svg" width="48" height="48" alt="logo"><br>
+  ramandhanu.cloud
+</h1>
 
-First, run the development server:
+<p align="center">
+  <strong>Modern DevOps & Cloud Engineering Portfolio Website</strong><br>
+  <sub>Built with Next.js 16, TypeScript, and Docker</sub>
+</p>
+
+<p align="center">
+  <a href="https://ramandhanu.cloud">🌐 Live Site</a> •
+  <a href="#-quick-start">🚀 Quick Start</a> •
+  <a href="#-docker-deployment">🐳 Docker</a> •
+  <a href="https://github.com/arramandhanu">💻 GitHub</a>
+</p>
+
+---
+
+## ✨ Features
+
+| Feature | Description |
+|---------|-------------|
+| 🎨 **Modern UI** | Dark theme with red accent, terminal-style aesthetics |
+| 📱 **Responsive** | Optimized for all devices |
+| ⚡ **Fast** | Static generation with Next.js |
+| 📧 **Contact Form** | Email integration via Web3Forms |
+| 🐳 **Docker Ready** | One-command deployment |
+| 🔒 **Secure** | Environment-based configuration |
+
+---
+
+## 🛠️ Tech Stack
+
+<table>
+<tr>
+<td align="center" width="96">
+  <img src="https://cdn.simpleicons.org/nextdotjs/white" width="36" height="36" alt="Next.js"><br>
+  <sub><b>Next.js 16</b></sub>
+</td>
+<td align="center" width="96">
+  <img src="https://cdn.simpleicons.org/typescript/3178C6" width="36" height="36" alt="TypeScript"><br>
+  <sub><b>TypeScript</b></sub>
+</td>
+<td align="center" width="96">
+  <img src="https://cdn.simpleicons.org/react/61DAFB" width="36" height="36" alt="React"><br>
+  <sub><b>React 19</b></sub>
+</td>
+<td align="center" width="96">
+  <img src="https://cdn.simpleicons.org/cssmodules/000000" width="36" height="36" alt="CSS Modules"><br>
+  <sub><b>CSS Modules</b></sub>
+</td>
+<td align="center" width="96">
+  <img src="https://cdn.simpleicons.org/docker/2496ED" width="36" height="36" alt="Docker"><br>
+  <sub><b>Docker</b></sub>
+</td>
+</tr>
+</table>
+
+---
+
+## 🚀 Quick Start
+
+### Prerequisites
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Node.js 20+
+npm or yarn
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Clone repository
+git clone https://github.com/arramandhanu/ramandhanu.cloud.git
+cd ramandhanu.cloud
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Install dependencies
+npm install
 
-## Learn More
+# Setup environment
+cp .env.example .env.local
+# Edit .env.local with your Web3Forms key
 
-To learn more about Next.js, take a look at the following resources:
+# Start development server
+npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Environment Variables
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Variable | Description |
+|----------|-------------|
+| `NEXT_PUBLIC_WEB3FORMS_KEY` | Web3Forms API key for contact form |
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🐳 Docker Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Build & Run Locally
+
+```bash
+# Build image
+docker build -t aryaramandhanu/ramandhanu-cloud:latest \
+  --build-arg NEXT_PUBLIC_WEB3FORMS_KEY=your_key_here .
+
+# Run container
+docker run -d -p 3000:3000 aryaramandhanu/ramandhanu-cloud:latest
+```
+
+### Docker Compose
+
+```bash
+# Create .env.local with your keys
+echo "NEXT_PUBLIC_WEB3FORMS_KEY=your_key" > .env.local
+
+# Build and run
+docker compose up -d
+
+# View logs
+docker compose logs -f
+```
+
+### Pull from Docker Hub
+
+```bash
+docker pull aryaramandhanu/ramandhanu-cloud:latest
+docker run -d -p 3000:3000 aryaramandhanu/ramandhanu-cloud:latest
+```
+
+---
+
+## 📁 Project Structure
+
+```
+ramandhanu.cloud/
+├── src/
+│   ├── app/                # Next.js App Router
+│   │   ├── layout.tsx      # Root layout
+│   │   ├── page.tsx        # Homepage
+│   │   └── globals.css     # Global styles
+│   └── components/
+│       ├── layout/         # Header, Footer
+│       └── sections/       # Hero, About, Services, etc.
+├── public/                 # Static assets
+├── Dockerfile              # Multi-stage build
+├── docker-compose.yml      # Container orchestration
+└── .env.example            # Environment template
+```
+
+---
+
+## 🔧 Development
+
+```bash
+# Start dev server
+npm run dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm run start
+
+# Lint code
+npm run lint
+```
+
+---
+
+## 📄 License
+
+MIT © [Arya Ramandhanu](https://ramandhanu.cloud)
+
+---
+
+<p align="center">
+  <sub>Built with ❤️ using Next.js</sub>
+</p>

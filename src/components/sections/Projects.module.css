@@ -1,0 +1,132 @@
+.projects {
+    padding: 100px 0;
+    background:
+        radial-gradient(ellipse at 80% 0%, rgba(145, 10, 8, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 20% 100%, rgba(145, 10, 8, 0.05) 0%, transparent 50%),
+        var(--background);
+    position: relative;
+    min-height: 100vh;
+    scroll-margin-top: 70px;
+}
+
+.projects::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+}
+
+.title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px;
+    transition: all 0.2s ease;
+}
+
+.card:hover {
+    border-color: var(--accent);
+    transform: translateX(6px);
+}
+
+.cardContent {
+    flex: 1;
+}
+
+.cardTitle {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+}
+
+.cardDescription {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.tech {
+    padding: 4px 10px;
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+}
+
+.cardArrow {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    transition: all 0.2s ease;
+    margin-left: 20px;
+}
+
+.card:hover .cardArrow {
+    color: var(--accent);
+    transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+    .projects {
+        padding: 60px 0;
+        min-height: auto;
+    }
+
+    .card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .cardArrow {
+        align-self: flex-end;
+        margin-left: 0;
+    }
+}

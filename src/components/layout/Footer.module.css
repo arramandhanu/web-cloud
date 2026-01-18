@@ -1,0 +1,89 @@
+.footer {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    padding: 24px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.copyright {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.links {
+    display: flex;
+    gap: 32px;
+}
+
+.links a {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    transition: color 0.2s ease;
+}
+
+.links a:hover {
+    color: var(--accent);
+}
+
+.social {
+    display: flex;
+    gap: 12px;
+}
+
+.social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text-muted);
+    transition: all 0.2s ease;
+}
+
+.social a:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px 24px;
+    }
+}
