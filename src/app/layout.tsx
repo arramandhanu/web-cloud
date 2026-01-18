@@ -9,6 +9,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://ramandhanu.cloud'),
   title: 'DevOps Engineer & Cloud Architect | ramandhanu.cloud',
   description: '15+ years infrastructure experience. 8+ years DevOps & Cloud engineering. Specializing in Kubernetes, Terraform, CI/CD, and cloud architecture.',
   keywords: ['DevOps', 'Cloud Architect', 'Kubernetes', 'Terraform', 'AWS', 'CI/CD', 'Infrastructure'],
