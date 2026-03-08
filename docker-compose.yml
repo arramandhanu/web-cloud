@@ -3,8 +3,8 @@ services:
     image: aryaramandhanu/ramandhanu-cloud:latest
     build:
       context: .
-      args:
-        - NEXT_PUBLIC_WEB3FORMS_KEY=${NEXT_PUBLIC_WEB3FORMS_KEY}
+    env_file:
+      - .env.local
     ports:
       - "3000:3000"
     environment:

@@ -14,7 +14,7 @@ export function Footer() {
                             </svg>
                             <span>ramandhanu.cloud</span>
                         </Link>
-                        <p className={styles.copyright}>© 2026 ramandhanu.cloud · Built with Next.js</p>
+                        <p className={styles.copyright}>© 2026 ramandhanu.cloud</p>
                     </div>
 
                     <div className={styles.links}>

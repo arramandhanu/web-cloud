@@ -11,10 +11,6 @@ COPY package*.json ./
 RUN npm ci
 COPY . .
 
-# Build-time env vars
-ARG NEXT_PUBLIC_WEB3FORMS_KEY
-ENV NEXT_PUBLIC_WEB3FORMS_KEY=${NEXT_PUBLIC_WEB3FORMS_KEY}
-
 RUN npm run build
 
 # Stage 3: Production

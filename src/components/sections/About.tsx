@@ -14,23 +14,24 @@ export function About() {
                                 <span className={styles.fileName}>about.yaml</span>
                             </div>
                             <pre className={styles.code}>
-                                {`name: "Arya Ramandhanu"
-role: "Senior DevOps Engineer"
-location: "Indonesia"
-experience:
-  infrastructure: "15+ years"
-  devops: "8+ years"
-  cloud: "AWS, GCP, Azure,
-          Alibaba Cloud, OCI"
-specializations:                                 
-  - "Kubernetes"
-  - "Cloud Native"
-  - "Terraform"
-  - "CI/CD Pipelines"
-  - "GitOps"
-  - "Security"
-certification:
-  - "FinOps Certified"`}
+                                <div><span className={styles.yamlKey}>name:</span> <span className={styles.yamlString}>"Arya Ramandhanu"</span></div>
+                                <div><span className={styles.yamlKey}>role:</span> <span className={styles.yamlString}>"Senior DevOps Engineer & Cloud Architect"</span></div>
+                                <div><span className={styles.yamlKey}>location:</span> <span className={styles.yamlString}>"Indonesia"</span></div>
+                                <div><span className={styles.yamlKey}>experience:</span></div>
+                                <div><span className={styles.yamlIndent} /><span className={styles.yamlKey}>infrastructure:</span> <span className={styles.yamlString}>"15+ years"</span></div>
+                                <div><span className={styles.yamlIndent} /><span className={styles.yamlKey}>devops:</span> <span className={styles.yamlString}>"8+ years"</span></div>
+                                <div><span className={styles.yamlIndent} /><span className={styles.yamlKey}>cloud:</span> <span className={styles.yamlString}>"AWS, GCP, Azure,</span></div>
+                                <div><span className={styles.yamlIndent} /><span className={styles.yamlIndent} /><span className={styles.yamlString}>Alibaba Cloud, OCI"</span></div>
+                                <div><span className={styles.yamlKey}>specializations:</span></div>
+                                <div><span className={styles.yamlIndent} /><span className={styles.yamlPunctuation}>-</span> <span className={styles.yamlString}>"Kubernetes"</span></div>
+                                <div><span className={styles.yamlIndent} /><span className={styles.yamlPunctuation}>-</span> <span className={styles.yamlString}>"Cloud Native Architecture"</span></div>
+                                <div><span className={styles.yamlIndent} /><span className={styles.yamlPunctuation}>-</span> <span className={styles.yamlString}>"Terraform / IaC"</span></div>
+                                <div><span className={styles.yamlIndent} /><span className={styles.yamlPunctuation}>-</span> <span className={styles.yamlString}>"CI/CD Pipelines"</span></div>
+                                <div><span className={styles.yamlIndent} /><span className={styles.yamlPunctuation}>-</span> <span className={styles.yamlString}>"GitOps"</span></div>
+                                <div><span className={styles.yamlIndent} /><span className={styles.yamlPunctuation}>-</span> <span className={styles.yamlString}>"DevSecOps & Security"</span></div>
+                                <div><span className={styles.yamlIndent} /><span className={styles.yamlPunctuation}>-</span> <span className={styles.yamlString}>"Observability"</span></div>
+                                <div><span className={styles.yamlKey}>certifications:</span></div>
+                                <div><span className={styles.yamlIndent} /><span className={styles.yamlPunctuation}>-</span> <span className={styles.yamlString}>"FinOps Certified"</span></div>
                             </pre>
                         </div>
                     </div>
@@ -45,6 +46,13 @@ certification:
                         </p>
 
                         <div className={styles.highlights}>
+                            <div className={styles.highlight}>
+                                <span className={styles.highlightIcon}>🏗️</span>
+                                <div>
+                                    <strong>Cloud Architecture</strong>
+                                    <span>Designing resilient, multi-region cloud-native ecosystems</span>
+                                </div>
+                            </div>
                             <div className={styles.highlight}>
                                 <span className={styles.highlightIcon}>🎯</span>
                                 <div>
@@ -64,6 +72,13 @@ certification:
                                 <div>
                                     <strong>CI/CD & GitOps</strong>
                                     <span>ArgoCD, GitLab CI, GitHub Actions – Ship with confidence</span>
+                                </div>
+                            </div>
+                            <div className={styles.highlight}>
+                                <span className={styles.highlightIcon}>📊</span>
+                                <div>
+                                    <strong>Observability & Monitoring</strong>
+                                    <span>Prometheus, Grafana, ELK – Deep visibility and proactive alerting</span>
                                 </div>
                             </div>
                         </div>
